@@ -22,6 +22,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+//show
+Route::get('/carroshow/{id}', [CarroController::class, 'show'])->name('carros.show');
+
 //criar
 Route::post('/add-carro', [CarroController::class, 'store'])->name('carros.add');
 //read

@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Auth;
 class CarroController extends Controller
 {
     //
+    public function show($id){
+        $user = Auth::user();
+        $carro = Carro::findOrFail($id);
+        return view('carros.show', compact('carro'));
+    }
 
     public function index(){
         $carros = Carro::get();

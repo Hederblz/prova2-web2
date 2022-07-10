@@ -39,6 +39,7 @@
                                 <td>{{$carro->placa}}</td>
                                 <td>{{$carro->roda}}</td>
                                 <td>|<a href="{{route('carros.edit', $carro->id)}}">editar</a>|</td>
+                                <td><a href="{{route('carros.show', $carro->id)}}">Detalhes</a></td>
                                 <td>|<button type="submit">Excluir</button>|</td>
                             </tr>
                             </form>
