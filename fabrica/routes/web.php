@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarroController;
+use App\Http\Controllers\CorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,8 @@ Route::get('/carroshow/{id}', [CarroController::class, 'show'])->name('carros.sh
 Route::post('/add-carro', [CarroController::class, 'store'])->name('carros.add');
 //read
 Route::get('/carro', [CarroController::class, 'index'])->name('carros.index');
+
+Route::get('/cores', [CorController::class, 'index'])->name('cores.index');
 
 //editar
 Route::get('/carro/{id}', [CarroController::class, 'edit'])->name('carros.edit');
