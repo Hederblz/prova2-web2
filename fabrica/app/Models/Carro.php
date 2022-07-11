@@ -20,4 +20,12 @@ class Carro extends Model
     public function dono(){
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function carroCor(){
+        return $this->hasMany(CarroCor::class);
+    }
+
+    public function fabrica(){
+        return $this->belongsToMany(Cor::class, 'carro_cor','carro_id','cor_id');
+    }
 }
