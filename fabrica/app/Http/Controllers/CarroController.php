@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Carro;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -12,7 +13,8 @@ class CarroController extends Controller
     public function show($id){
         $user = Auth::user();
         $carro = Carro::findOrFail($id);
-        return view('carros.show', compact('carro'));
+        $carroDono = User::where('id', $carro->user_id)->first()->toArray();
+        return view('carros.show', ['carro'=>$carro, 'carroDono'=>$carroDono]);
     }
 
     public function index(){
