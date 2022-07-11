@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cor extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['matriz'];
 }
