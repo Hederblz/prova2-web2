@@ -18,7 +18,7 @@ class CorFactory extends Factory
     {
         return [
             //
-            'matriz' => $this->faker->colorName()
+            'matriz' => $this->faker->hexColor()
         ];
     }
 }
