@@ -46,12 +46,12 @@ class CarroController extends Controller
     public function update(Request $request, $id)
     {
         $user = Auth::user();
-        $camisa = Carro::findOrFail($id);
-        $camisa->marca = $request->marca;
-        $camisa->modelo = $request->modelo;
-        $camisa->placa = $request->placa;
-        $camisa->roda = $request->roda;
-        $camisa->update();
+        $carro = Carro::findOrFail($id);
+        $carro->marca = $request->marca;
+        $carro->modelo = $request->modelo;
+        $carro->placa = $request->placa;
+        $carro->roda = $request->roda;
+        $carro->update();
         return redirect()->route('carros.index');
     }
 
