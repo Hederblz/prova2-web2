@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Carro;
+use App\Models\CarroCor;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CarroSeeder extends Seeder
+class CarroCorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +17,7 @@ class CarroSeeder extends Seeder
     {
         //
         for ($i = 0; $i < 20; $i++) {
-            Carro::factory()->create();
+            CarroCor::factory()->create();
         }
     }
 }

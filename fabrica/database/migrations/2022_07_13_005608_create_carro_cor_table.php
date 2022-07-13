@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carro_cors', function (Blueprint $table) {
+        Schema::create('carro_cor', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('carro_id');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carro_cors');
+        Schema::dropIfExists('carro_cor');
     }
 };

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,11 @@ class CarroFactory extends Factory
     {
         return [
             //
+            'marca' => $this->faker->word(),
+            'modelo' => $this->faker->word(),
+            'placa' => $this->faker->word(),
+            'roda' => $this->faker->word(),
+            'user_id'=> User::all()->random()->id
         ];
     }
 }

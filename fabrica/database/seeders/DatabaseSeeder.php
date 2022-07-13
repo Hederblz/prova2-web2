@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -21,8 +22,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        for ($i = 0; $i < 10; $i++) {
+            User::factory()->create([
+                'email' => 'user' . $i . '@email.com'
+            ]);
+        }
+
         $this->call([
-            CorSeeder::class
+            CorSeeder::class,
+            CarroSeeder::class,
+            CarroCorSeeder::class
         ]);
     }
 }
